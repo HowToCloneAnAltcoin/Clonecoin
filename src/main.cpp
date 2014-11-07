@@ -35,7 +35,7 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0x");
+uint256 hashGenesisBlock("0x235b6e7fa788b4a0914a959c7ccb38f6cb2706a4c5bd68c0d64f22ba7772baf9");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // Clonecoin: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -2757,7 +2757,7 @@ bool LoadBlockIndex()
         pchMessageStart[1] = 0xb2;
         pchMessageStart[2] = 0xa4;
         pchMessageStart[3] = 0xdc;
-        hashGenesisBlock = uint256("0x");
+        hashGenesisBlock = uint256("0x235b6e7fa788b4a0914a959c7ccb38f6cb2706a4c5bd68c0d64f22ba7772baf9");
     }
 
     //
@@ -2804,12 +2804,12 @@ bool InitBlockIndex() {
         block.nVersion = 1;
         block.nTime    = 1415210670;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 0;
+        block.nNonce   = 2110551;
 
         if (fTestNet)
         {
             block.nTime    = 1415210670;
-            block.nNonce   = 0;
+            block.nNonce   = 2110551;
         }
 
         //// debug print
